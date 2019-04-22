@@ -1,0 +1,7 @@
+.category-wrapper {
+  display: flex;
+  font-size: 40rpx;
+  padding-top: 20rpx;
+  padding-bottom: 25rpx; 
+  background-color: lightblue;
+}
