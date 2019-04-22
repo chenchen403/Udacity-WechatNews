@@ -5,3 +5,9 @@
   padding-bottom: 25rpx; 
   background-color: lightblue;
 }
+
+.category-item {
+  padding-right: 13rpx;
+  padding-left: 13rpx;
+  color: white
+}

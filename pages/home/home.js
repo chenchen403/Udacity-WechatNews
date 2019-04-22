@@ -1,10 +1,18 @@
-// pages/list/list.js
-Page({
+// 程序主页面
 
-  /**
-   * 页面的初始数据
-   */
+const categoryMap = {
+  'gn': '国内',
+  'gj': '国际',
+  'cj': '财经',
+  'yl': '娱乐',
+  'js': '军事',
+  'ty': '体育',
+  'other': '其他',
+}
+
+Page({
   data: {
+    categoryNames: ['国内','国际','财经','体育','军事','娱乐','其他']
 
   },
 

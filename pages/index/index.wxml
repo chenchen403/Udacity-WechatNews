@@ -1,9 +1,0 @@
-<view class = 'category-wrapper'>
-  <view class = 'national'>国内</view>
-  <view class = 'world'>国际</view>
-  <view class = 'business'>财经</view>
-  <view class = 'entertainment'>娱乐</view>
-  <view class = 'military'>军事</view>
-  <view class = 'sports'>体育</view>
-  <view class = 'others'>其他</view>
-</view>
