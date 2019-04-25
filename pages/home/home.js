@@ -1,13 +1,13 @@
 // 程序主页面
 
 const categoryMap = {
-  'gn': '国内',
-  'gj': '国际',
-  'cj': '财经',
-  'yl': '娱乐',
-  'js': '军事',
-  'ty': '体育',
-  'other': '其他',
+  '国内': 'gn',
+  '国际': 'gj',
+  '财经': 'cj',
+  '娱乐': 'yl',
+  '军事': 'js',
+  '体育': 'ty',
+  '其他': 'other',
 }
 
 Page({
@@ -41,11 +41,11 @@ getNews(callback){
     success: res => {
       let result = res.data.result
       let newsList = []
-      for (let i = 0; i < 9; i++) {
+      for (let i = 0; i < result.length; i++) {
         newsList[i] = result[i]
+        //console.log(newsList[i])
         newsList[i].date = result[i].date.slice(0, 10)
         newsList[i].firstImage = result[i].firstImage ? result[i].firstImage : '/images/placeholder.png'
-        console.log(newsList[i])
       }
       this.setData({
         newsList: newsList
@@ -56,6 +56,17 @@ getNews(callback){
     }
   })
 },
+
+onTapChangeCategory: function(event) {
+  //console.log(event)
+  let typeZH = event.currentTarget.dataset.category
+  let typeEN = categoryMap[typeZH]
+  this.setData ({
+    type: typeEN
+  })
+  this.getNews()
+},
+
 //获取新闻详情
 getDetail(){
 
