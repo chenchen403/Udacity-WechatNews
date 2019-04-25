@@ -12,6 +12,10 @@
   color: white;
 }
 
+.change-colour {
+  color: grey;
+}
+
 .news-list {
   padding-top: 10rpx;
   padding-bottom: 10rpx; 

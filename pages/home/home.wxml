@@ -1,6 +1,6 @@
 <view class = 'category-wrapper'>
   <view class = 'category-item' wx:for = "{{categoryNames}}" wx:for-index='i'>
-    <view bindtap = 'onTapChangeCategory' data-category="{{categoryNames[i]}}">{{categoryNames[i]}}</view>
+    <view hover="true" hover-class = 'change-colour' hover-stay-time="10000000" bindtap = 'onTapChangeCategory' data-category="{{categoryNames[i]}}">{{categoryNames[i]}}</view>
   </view> 
 </view>
 <scroll-view scroll-y>
