@@ -12,63 +12,53 @@ const categoryMap = {
 
 Page({
   data: {
-    categoryNames: ['国内','国际','财经','体育','军事','娱乐','其他']
+    categoryNames: ['国内','国际','财经','体育','军事','娱乐','其他'],
+    newsList : [{
+      id: '',
+      title: '',
+      source: '',
+      date: '',
+      firstImage: ''
+    }]
 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad(){
+    wx.request({
+      url: 'https://test-miniprogram.com/api/news/list',
+      data: {
+        'type': 'gn'
+        },
+      success: res => {
+        let result = res.data.result
+        let newsList = []
+        for (let i = 0; i < 9; i ++){
+          newsList[i] = result[i]
+          newsList[i].date = result[i].date.slice(0, 10)
+          console.log(newsList[i])
+        }
+        this.setData ({
+          newsList: newsList
+        })
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+//获取新闻概览
+getNews(){
 
-  },
+},
+//获取新闻详情
+getDetail(){
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
+},
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
   }
 })

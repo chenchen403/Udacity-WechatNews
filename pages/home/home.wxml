@@ -1,10 +1,17 @@
 <view class = 'category-wrapper'>
   <view class = 'category-item' wx:for = "{{categoryNames}}" wx:for-index='i'>{{categoryNames[i]}}</view>
 </view>
-<view class = 'newsDetails'>
-  <view class = 'hotNews'></view>
-  <scroll-view scroll-y>
-    <view class = 'news-list'>
+<scroll-view scroll-y>
+  <view class = 'news-list'>
+    <view class = 'news-item' wx:for = "{{newsList}}" wx:for-index='i'>
+      <view class = 'news-text'>
+        <view class = 'news-title'>{{newsList[i].title}}</view>
+        <view class = 'news-otherInfo'>
+          <view class = 'news-source'>{{newsList[i].source}}</view>
+          <view class = 'news-date'>{{newsList[i].date}}</view>
+        </view>
+      </view>
+      <image class = 'news-image' src = '{{newsList[i].firstImage}}' scale='' mode='aspectFill'></image>
     </view>
-  </scroll-view>
-</view>
+  </view>
+</scroll-view>
