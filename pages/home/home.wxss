@@ -9,11 +9,14 @@
 .category-item {
   padding-right: 13rpx;
   padding-left: 13rpx;
-  color: white;
 }
 
-.change-colour {
-  color: grey;
+.item-colour {
+    color: white;
+}
+
+.item-colour:active {
+    color: grey;
 }
 
 .news-list {

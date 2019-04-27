@@ -21,6 +21,7 @@ Page({
       firstImage: ''
     }],
     type: 'gn',
+    typeZH: '国内'
 
   },
 
@@ -62,7 +63,8 @@ onTapChangeCategory: function(event) {
   let typeZH = event.currentTarget.dataset.category
   let typeEN = categoryMap[typeZH]
   this.setData ({
-    type: typeEN
+    type: typeEN,
+    typeZH: typeZH
   })
   this.getNews()
 },
