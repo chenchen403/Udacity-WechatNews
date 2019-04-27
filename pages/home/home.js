@@ -20,7 +20,7 @@ Page({
       date: '',
       firstImage: ''
     }],
-    type: 'gn',
+    typeEN: 'gn',
     typeZH: '国内'
 
   },
@@ -37,7 +37,7 @@ getNews(callback){
   wx.request({
     url: 'https://test-miniprogram.com/api/news/list',
     data: {
-      'type': this.data.type
+      'type': this.data.typeEN
     },
     success: res => {
       let result = res.data.result
@@ -63,7 +63,7 @@ onTapChangeCategory: function(event) {
   let typeZH = event.currentTarget.dataset.category
   let typeEN = categoryMap[typeZH]
   this.setData ({
-    type: typeEN,
+    typeEN: typeEN,
     typeZH: typeZH
   })
   this.getNews()
