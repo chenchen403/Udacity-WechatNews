@@ -1,1 +1,28 @@
-/* pages/details/details.wxss */
+ /* pages/details/details.wxss */
+ .news-wrapper {
+
+ }
+
+ .news-title {
+
+ }
+
+ .news-info {
+   display: flex
+ }
+
+ .news-source {
+
+ }
+
+ .news-date {
+
+ }
+
+ .news-readCount {
+
+ }
+
+ .news-content {
+
+ }

@@ -1,2 +1,12 @@
 <!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+<view class = 'news-wrapper'>
+  <view class = 'news-title'>{{details.title}}</view>
+  <view class = 'news-info'>
+    <view class = 'news-source'>{{details.source}}</view>
+    <view class = 'news-date'>{{details.date}}</view>
+    <view class = 'news-readCount'>阅读 {{details.readCount}}</view>
+  </view>
+  <view class = 'news-content' wx:for = "{{details.content}}" wx:for-index='i'>
+  {{contentFormat[i]}}
+  </view>
+</view>
