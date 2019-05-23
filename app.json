@@ -4,9 +4,10 @@
     "pages/details/details"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#add8e6",
     "navigationBarTitleText": "豆子的新闻直播室",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   }
 }

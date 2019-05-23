@@ -3,19 +3,16 @@
 
 Page({
   data: {
-    id: '1552623252490', //调试模式
-    //调试结束以后恢复
-    //id: '',
+    id: '',
     details: {},
     detailsContent: []
   },
 
 
   onLoad(options) {
-    //调试结束以后恢复
-    /*this.setData({
+    this.setData({
       id: options.id
-    })*/
+    })
     this.getDetail()
   },
 

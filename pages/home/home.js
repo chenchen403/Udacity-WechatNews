@@ -24,7 +24,11 @@ Page({
     typeZH: '国内',
     selectedID: ''
   },
-  
+  onPullDownRefresh() {
+    this.getNews(() => {
+      wx.stopPullDownRefresh()
+    })
+  },
   onLoad(){
     this.getNews()
   },
