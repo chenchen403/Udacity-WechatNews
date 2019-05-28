@@ -48,10 +48,14 @@ Page({
           //console.log(newsList[i])
           newsList[i].date = result[i].date.slice(0, 10)
           newsList[i].firstImage = result[i].firstImage ? result[i].firstImage : '/images/placeholder.png'
+          newsList[i].source = result[i].source ? result[i].source : '来源：不详'
         }
         this.setData({
           newsList: newsList
         })
+      },
+      fail: error => {
+          console.log(error)
       },
       complete: () => {
         callback && callback()

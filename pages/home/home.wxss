@@ -15,7 +15,7 @@
     color: white;
 }
 
-.item-colour:active {
+.item-colour.active {
     color: grey;
 }
 
